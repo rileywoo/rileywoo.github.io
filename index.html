@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, intial-scale=1">
         <title>Riley Woo</title>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
@@ -33,30 +35,96 @@
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <img src="http://image005.flaticon.com/159/svg/148/148843.svg" alt="map icon" height="100px" width="100px" style="margin-left: 150px">
+                    <img class="img-responsive icon" src="http://image005.flaticon.com/159/svg/148/148843.svg" data-toggle="modal" data-target="#mapProject" style="margin-left: 150px" alt="map icon">
                 </div>
                 <div class="col-md-3">
-                    <img src="http://image005.flaticon.com/1/svg/125/125274.svg" alt="notepad icon" height="100px" width="100px">
+                    <img class="img-responsive icon" src="http://image005.flaticon.com/1/svg/125/125274.svg" data-toggle="modal" data-target="#editorProject" alt="notepad icon">
                 </div>
                 <div class="col-md-3">
-                    <a href="https://www.linkedin.com/in/rileywoo"><img border="0" alt="linkedin icon" src="http://image005.flaticon.com/1/svg/145/145807.svg" width="100px" height="100px" style="margin-left: 150px"></a>
+                    <a href="https://www.linkedin.com/in/rileywoo"><img class="img-responsive icon" border="0" alt="linkedin icon" src="http://image005.flaticon.com/1/svg/145/145807.svg" style="margin-left: 150px"></a>
                 </div>
                 <div class="col-md-3">
-                    <a href="https://github.com/rileywoo"><img border="0" alt="github icon" src="http://image005.flaticon.com/25/svg/25/25231.svg" width="100px" height="100px"></a>
+                    <a href="https://github.com/rileywoo"><img class="img-responsive icon" border="0" alt="github icon" src="http://image005.flaticon.com/25/svg/25/25231.svg"></a>
                 </div>
             </div>
             <div class="row" style="margin-top: 25px">
                 <div class="col-md-3">
-                    <img src="http://image005.flaticon.com/159/svg/137/137068.svg" alt="cube icon" height="100px" width="100px" style="margin-left: 150px">
+                    <img class="img-responsive icon" src="http://image005.flaticon.com/159/svg/137/137068.svg" data-toggle="modal" data-target="#cubeProject" style="margin-left: 150px" alt="cube icon">
                 </div>
                 <div class="col-md-3">
-                    <img src="http://image005.flaticon.com/159/svg/148/148937.svg" alt="timer icon" height="100px" width="100px">
+                    <img class="img-responsive icon" src="http://image005.flaticon.com/159/svg/148/148937.svg" data-toggle="modal" data-target="#timerProject" alt="timer icon">
                 </div>
                 <div class="col-md-3">
-                    <a href="https://www.youtube.com/user/MyLifeIsRiley"><img border="0" alt="wca icon" src="http://image005.flaticon.com/1/svg/143/143622.svg" width="100px" height="100px" style="margin-left: 150px"></a>
+                    <a href="https://www.youtube.com/user/MyLifeIsRiley"><img class="img-responsive icon" border="0" alt="youtube icon" src="http://image005.flaticon.com/1/svg/143/143622.svg" style="margin-left: 150px"></a>
                 </div>
                 <div class="col-md-3">
-                    <a href="https://www.worldcubeassociation.org/results/p.php?i=2007WOOR01"><img border="0" alt="wca icon" src="https://www.worldcubeassociation.org/files/WCAlogo_notext.svg" width="100px" height="100px"></a>
+                    <a href="https://www.worldcubeassociation.org/results/p.php?i=2007WOOR01"><img class="img-responsive icon" border="0" alt="wca icon" src="https://www.worldcubeassociation.org/files/WCAlogo_notext.svg"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="mapProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">BearMaps</h4>
+                        <em><h5>Language(s): Java</h5></em>
+                    </div>
+                    <div class="modal-body">
+                        BearMaps was the final project in CS 61B (Data Structures and Algorithms). In the project, I parsed XML from the OpenMapProject and created a rough version of Google Maps. With the A* algorithm, one can navigate from any place in Berkeley to another. Users also can zoom in to yield greater detail in the map, or vice versa. To do this, I implemented the quadtree data structure. There also is a search bar to find locations, implemented with a trie.<br><br>I will be deploying the project to Heroku soon so you can see it in action.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="editorProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Text Editor</h4>
+                        <em><h5>Language(s): Java</h5></em>
+                    </div>
+                    <div class="modal-body">
+                        Coding a text editor was the semi-final project in CS 61B (Data Structures and Algorithms). The editor lets users resize the window, increase/decrease font size, undo/redo actions, file I/O, among other things. I used the JavaFX library for the GUI and various data structures to support efficient runtimes. These structures include a modified doubly-linked list, a modified stack, and ArrayLists.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="cubeProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Rubik's Cube Solver</h4>
+                        <em><h5>Language(s): Python</h5></em>
+                    </div>
+                    <div class="modal-body">
+                        In this project, I created a program that given any Rubik's Cube scramble, will print out a solution. In addition, it returns a TinyURL that leads to a visualization of the cube at each step, so users can follow along. The program helps people who are learning to solve the cube blindfolded, as the solution printed is in terms of the Old Pochmann method, a beginner's method to solving the cube blindfolded. I used recursion and conditional flow. See this <a href="https://github.com/rileywoo/Cube-Solver">GitHub link</a> on how to use it, though I will eventually move it to a browser.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="timerProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Rubik's Cube Timer</h4>
+                        <em><h5>Language(s): JavaScript, HTML, CSS</h5></em>
+                    </div>
+                    <div class="modal-body">
+                        This project, which is desktop friendly, provides users with a standard scramble for the cube, and then a timer. The site saves times, and calculates various statistics along the way. Try it out <a href="rileyw.xyz/tftimer">here</a>.<br><br>Since I just learned Bootstrap, I will be redesigning the layout soon. There are also <em>many</em> more features I have yet to add, including inspection, plus-twos, saving times, multiple sessions, etc.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
